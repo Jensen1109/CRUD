@@ -38,6 +38,10 @@ form select {
   line-height: 1.5;
   outline: none;
 }
+.genero {
+  font-weight: bold;
+  cursor: pointer;
+}
 .generos {
   display: flex;
   flex-direction: row;
@@ -68,57 +72,97 @@ form select {
   font-family: inherit;
   display: inline-block;
 }
-.btn--border
-{
-  background-color: #f3f3f3;
-  border: 1px solid #444444;
-  color: #444444;
-
-
-}
 .error {
   border: solid 1px red;
 }
 
-.card{
-  background-color: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 20px;
-  border: solid 1px #e7e6e6;
-  border-radius: 12px;
-  padding: 18px;
-  gap: 14px;
-}
-.card__header
-{
-display: flex;
-justify-content: end;
-}
-.card__footer
-{
-  display: flex;
-  justify-content: end;
-}
-.btn-danger {
-  background-color: #ff4d4d; 
-  color: white;              
-  width: 40px;              
-  height: 40px;             
-  border-radius: 50%;        
-  display: flex;             
-  align-items: center;     
-  justify-content: center;   
-  cursor: pointer;
-  transition: background 0.2s;
-  border: none;             
+.titulo {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #333;
 }
 
-.btn-danger:hover {
-  background-color: #cc0000; 
-} 
-.btn-danger i {
-  font-size: 1.2rem;
+.usuarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.usuario-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 18px;
+  width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.usuario-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.usuario-card__nombre {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.usuario-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.btn-eliminar {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  height: 30px;
+  width: 50px;
+}
+
+.btn-editar {
+  background: #444444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  width: 110px;
+  height: 32px;
+}
+
+.usuario-card__info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.usuario-card__info strong {
+  color: #333;
+}
+
+.sin-usuarios {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  width: 100%;
 }

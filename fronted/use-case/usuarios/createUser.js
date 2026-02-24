@@ -3,15 +3,15 @@ export const createUser = async (documento, nombre, genero, ciudad, correo) => {
     method: 'POST',
     body: JSON.stringify({
       documento: documento,
-      nombre:nombre,
-      genero_id:genero,
-      ciudad_id:ciudad,
-      correo:correo
+      nombre: nombre,
+      genero_id: genero,
+      ciudad_id: ciudad,
+      correo: correo
     }),
     headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
-  const respuesta = solicitud.json();
+  const respuesta = await solicitud.json();
   return respuesta;
 }

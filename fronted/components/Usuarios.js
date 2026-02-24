@@ -4,14 +4,14 @@
 //   - "datos": un arreglo de objetos con la información de cada usuario (obtenido del servidor).
 export const armarUsuarios = (elemento, datos) => {
   // Limpia todo el contenido previo del contenedor para evitar duplicados al re-renderizar.
-elemento.textContent = "";
+  elemento.textContent = "";
 
   // Crea un DocumentFragment, que es un contenedor temporal en memoria.
   // Se usa para agregar múltiples elementos al DOM de forma eficiente (una sola inserción en vez de muchas).
-const frag = document.createDocumentFragment();
+  const frag = document.createDocumentFragment();
 
   // Recorre cada objeto "usuario" dentro del arreglo "datos" usando forEach.
-datos.forEach(usuario => {
+  datos.forEach(usuario => {
     // Crea un elemento <div> que servirá como la card del usuario.
     const card = document.createElement('div');
 
@@ -109,9 +109,9 @@ datos.forEach(usuario => {
 
     // Agrega la card al fragmento (todavía no está en el DOM real).
     frag.append(card);
-});
+  });
 
   // Inserta todo el fragmento (con todas las cards creadas) dentro del elemento en el DOM.
   // Esta es la única operación que modifica el DOM real, lo cual es más eficiente.
-elemento.append(frag);
+  elemento.append(frag);
 }
